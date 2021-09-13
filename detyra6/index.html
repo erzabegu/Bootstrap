@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/960_12_col.css" rel="stylesheet">
+    <link href="css/text.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        .img-fluid {
+            max-width: 100%;
+        }
+        
+        #menu li,
+        #submenu li {
+            display: inline-block;
+            width: 90px;
+            background-color: rgb(206, 221, 226);
+            margin: 4px;
+            position: relative;
+            padding: 7px;
+            text-align: center;
+            border: 1px solid rgb(179, 14, 91);
+            /* osht inherited */
+        }
+        
+        #menu li {
+            border-radius: 0 10px 0 10px;
+        }
+        
+        #menu li:hover,
+        #submenu li:hover {
+            background-color: rgb(235, 222, 213);
+        }
+        
+        #menu li a,
+        #submenu li a {
+            text-transform: uppercase;
+            color: black;
+            display: block;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        #menu li a:hover {
+            color: black;
+            text-decoration: none;
+        }
+        
+        #menu li #submenu,
+        #submenu li ul {
+            display: none;
+        }
+        
+        #menu li:hover #submenu {
+            display: block;
+            position: absolute;
+            top: 35px;
+            left: -45px;
+        }
+        
+        #submenu li:hover ul {
+            display: block;
+            position: absolute;
+            top: 32px;
+            left: 50px;
+        }
+        
+        #menu li:hover ul li {
+            display: block;
+            z-index: 9999;
+        }
+        
+        #submenu li:hover ul li {
+            display: block;
+            z-index: 9999;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #menu>li {
+                display: block;
+                /* width: 100%; */
+            }
+            #submenu>li {
+                z-index: 999;
+            }
+            #submenu>li li {
+                display: block;
+                position: absolute;
+                top: 10px;
+                left: 37px;
+                z-index: 999;
+            }
+        }
+        
+        .titles {
+            text-align: center;
+            letter-spacing: 2px;
+            color: rgb(179, 14, 91);
+        }
+        
+        nav {
+            margin-top: -5px;
+            margin-bottom: -7px;
+            background-color: rgb(236, 227, 221);
+            top: 0;
+            position: sticky;
+            z-index: 9999;
+        }
+        
+        #article1 {
+            background-color: rgb(236, 227, 221);
+        }
+        
+        #article1 img {
+            margin-top: 10px;
+            /* border: 1px solid rgb(204, 57, 82); */
+            border-radius: 20px;
+            padding: 15px;
+        }
+        
+        #div-main {
+            margin-left: 20px;
+            margin-top: 70px;
+            /* padding-top: -15px; */
+        }
+        
+        input {
+            border: 1px solid rgb(179, 14, 91);
+            padding: 5px;
+        }
+        
+        footer {
+            background-color: rgb(236, 227, 221);
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .foot img {
+            outline: 2px solid rgb(211, 118, 134);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container_12">
+        <header>
+            <img src="foto/header1.jpg" class="img-fluid, grid_12">
+        </header>
+        <nav class="grid_12 ">
+            <ul id="menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCTS</a>
+                    <ul id="submenu">
+                        <li><a href="#">Skin Care</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Toner</a>
+                                </li>
+                                <li><a href=" # ">SERUM</a></li>
+                                <li><a href=" # ">Olive oil</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="# ">Oils</a></li>
+                        <li><a href="# ">Masks</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="# ">SERVICES</a></li>
+                <li><a href="# ">CONTACT</a></li>
+            </ul>
+
+        </nav>
+        <div class="grid_12 " style=" background-color:rgb(231, 220, 220); padding:10px ">
+            <div class="grid_11, push_1 ">
+                <img src="foto/emoji.jpg" class="grid_2 " height=" 140 ">
+                <img src="foto/emoji4.jpg" class="grid_2 ,img-fluid " height="140 ">
+                <img src="foto/emoji2.jpg" class="grid_2 " height="140 ">
+                <img src="foto/emoji3.jpg " class="grid_2 " height="140 ">
+                <img src="foto/emoji1.jpg " class="grid_2 " height="140 ">
+            </div>
+        </div>
+        <div class="grid_12" id="article1">
+            <div class="grid_12, push_1 ">
+                <div class="grid_5 ">
+                    <img src="foto/beauty2.png " class="img-fluid ">
+                </div>
+                <div id="div-main" class="grid_5 ">
+                    <h2 class="push_1 ">BEAUTY PRODUCTS</h2>
+                    <p class="push1, titles ">SHOP NOW</p>
+                    <p class="grid_5"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero repudiandae aperiam saepe quibusdam unde sit voluptates adipisci. Distinctio dolore saepe deserunt repellendus! Tenetur, cum neque. Iusto saepe placeat provident quaerat.</p>
+                    <form class="push_1">
+                        <input type="search" placeholder="search here" style="text-align: center;">
+                    </form>
+                </div>
+            </div>
+            <!-- </div>
+        <div class="grid_12 " style=" background-color:rgb(231, 220, 220); padding:10px ">
+            <div class="grid_11, push_1 ">
+                <img src="emoji.jpg" class="grid_2 " height=" 140 ">
+                <img src="emoji4.jpg" class="grid_2 ,img-fluid " height="140 ">
+                <img src="emoji2.jpg" class="grid_2 " height="140 ">
+                <img src="emoji3.jpg " class="grid_2 " height="140 ">
+                <img src="emoji1.jpg " class="grid_2 " height="140 ">
+            </div>
+        </div> -->
+            <hr class="grid_9 push_1">
+            <div class="grid_12 " style="padding:20px ">
+                <div class="grid_7 ">
+                    <img src="foto/model.jpg" class="grid_3 ">
+                    <img src="foto/model1.jpg" class="grid_3 " height="330">
+                    <img src="foto/model2.jpg " class="grid_3 ">
+                    <img src="foto/model3.jpg" class="grid_3 ">
+                </div>
+                <div class="grid_4 ">
+                    <h1 class="grid_2 ">OUR PRODUCTS</h1>
+                    <hr>
+                    <p class="push1, titles ">INGREDIENTS</p>
+                    <h4 style="font-style: italic; text-align: center;">“What you use, makes you beautiful.”</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam animi ab eligendi libero, consectetur ut inventore voluptas, eos corporis voluptate sapiente explicabo quod, quaerat deleniti nesciunt! Deleniti quasi modi tempore!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam animi ab eligendi libero, consectetur ut inventore voluptas, eos corporis voluptate sapiente explicabo quod, quaerat deleniti nesciunt! Deleniti quasi modi tempore!</p>
+                </div>
+            </div>
+            <footer class="grid_12 " style="background-color:rgb(228, 225, 212); margin-left: 0;">
+
+
+                <div class="grid_7, foot " style="margin-top: 50px;">
+                    <img src="foto/letter.png" class="grid_2 " height="80 ">
+                    <img src="foto/letter2.png" class="grid_2 " height="80 ">
+                    <img src="foto/letter1.png" class="grid_2 " height="80 ">
+                </div>
+
+
+                <div class="grid_3" style="margin-left:120px">
+                    <h5 class="titles">LOCATION</h5>
+                    <hr>
+                    <p><em>Mc.Gordon ,No.55, Florida</em></p>
+                    <p><em>+012-345-6789</em></p>
+                    <!-- <p>Contact us on
+                        <a href="mailto:erzabegu3@gmail.com"><img src="gmail.jpg"></a>
+                    </p> -->
+                </div>
+                <div class="grid_12" style="background-color: beige; margin-left: 0;">
+                    <div class="grid_4">
+                        <p class="push_4"> Copy rights by Bounday Group</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+</body>
+
+</html>
